@@ -39,6 +39,8 @@ services:
       PGADMIN_DEFAULT_PASSWORD: adminadmi
     volumes:
       - pgadmin-data:/var/lib/pgadmin
+    networks:
+      - custom
 
 
 networks:

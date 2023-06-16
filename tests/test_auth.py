@@ -1,10 +1,9 @@
-from web.database.dals import UserDAL, UserTokenDAL
+from web.database.dals import UserTokenDAL
 from conftest import client, async_session
 
 
-
 def test_register():
-    test_user_data = {'username': 'john_doe',}
+    test_user_data = {'username': 'john_doe', }
     headers = {'Authorization': 'Bearer test_key'}
     response = client.post("/user/create", headers=headers, json=test_user_data)
 
