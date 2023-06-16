@@ -1,0 +1,43 @@
+INSERT INTO public.users (id, username, is_superuser, data_joined, is_active) VALUES (12, 'ramisram1s', true, '2003-09-26 16:15:14.000000', true);
+INSERT INTO public.users (id, username, is_superuser, data_joined, is_active) VALUES (17, 'benhamen', true, '2020-10-20 23:15:40.000000', true);
+INSERT INTO public.users (id, username, is_superuser, data_joined, is_active) VALUES (18, 'Trinity', false, '2021-07-02 14:14:09.000000', false);
+INSERT INTO public.users (id, username, is_superuser, data_joined, is_active) VALUES (13, 'herozip', false, '2023-08-15 22:12:00.000000', false);
+INSERT INTO public.users (id, username, is_superuser, data_joined, is_active) VALUES (19, 'brillia', false, '2022-11-15 22:12:51.000000', true);
+INSERT INTO public.users (id, username, is_superuser, data_joined, is_active) VALUES (21, 'frezden', false, '2015-12-30 22:12:58.000000', false);
+INSERT INTO public.users (id, username, is_superuser, data_joined, is_active) VALUES (20, 'zhosto', false, '2023-06-15 22:12:50.000000', true);
+INSERT INTO public.users (id, username, is_superuser, data_joined, is_active) VALUES (14, 'bookly', false, '2021-03-24 13:12:05.000000', true);
+INSERT INTO public.users (id, username, is_superuser, data_joined, is_active) VALUES (16, 'lupibo', false, '2022-12-18 08:00:21.000000', true);
+INSERT INTO public.users (id, username, is_superuser, data_joined, is_active) VALUES (15, 'sekken', false, '2023-06-15 22:12:04.000000', true);
+
+INSERT INTO public.articles (id, user_id, title, text, is_archived) VALUES (16, 12, 'Дания', 'Красивая страна', true);
+INSERT INTO public.articles (id, user_id, title, text, is_archived) VALUES (17, 12, 'Гватемала', 'Очень красивая страна', false);
+INSERT INTO public.articles (id, user_id, title, text, is_archived) VALUES (18, 13, 'Малайзия', 'Очень очень красивая страна', false);
+INSERT INTO public.articles (id, user_id, title, text, is_archived) VALUES (19, 14, 'Шри-Ланка', 'Очень очень очень красивая страна', false);
+INSERT INTO public.articles (id, user_id, title, text, is_archived) VALUES (20, 15, 'Оман', 'Очень очень очень очень красивая страна', false);
+INSERT INTO public.articles (id, user_id, title, text, is_archived) VALUES (21, 16, 'Мадагаскар', 'Очень очень очень очень очень красивая страна', false);
+INSERT INTO public.articles (id, user_id, title, text, is_archived) VALUES (22, 17, 'Кувейт', 'Очень очень очень очень очень очень красивая страна', false);
+INSERT INTO public.articles (id, user_id, title, text, is_archived) VALUES (23, 18, 'Россия', 'Очень очень очень очень очень очень красивая страна', false);
+INSERT INTO public.articles (id, user_id, title, text, is_archived) VALUES (24, 19, 'Монголия', 'Очень очень очень очень очень очень очень красивая страна', false);
+INSERT INTO public.articles (id, user_id, title, text, is_archived) VALUES (25, 20, 'Сингапур', 'Очень очень очень очень очень очень очень очень красивая страна', false);
+
+INSERT INTO public.comments (id, article_id, text, created_at) VALUES (4, 16, 'Круто', '2022-01-02 13:25:00.000000');
+INSERT INTO public.comments (id, article_id, text, created_at) VALUES (5, 16, 'Очень круто', '2019-11-05 13:14:17.000000');
+INSERT INTO public.comments (id, article_id, text, created_at) VALUES (6, 17, 'Очень очень круто', '2011-08-30 19:26:30.000000');
+INSERT INTO public.comments (id, article_id, text, created_at) VALUES (7, 18, 'Очень очень круто', '2017-08-05 21:26:58.000000');
+INSERT INTO public.comments (id, article_id, text, created_at) VALUES (8, 19, 'Очень очень очень круто', '2022-11-09 22:23:12.000000');
+INSERT INTO public.comments (id, article_id, text, created_at) VALUES (9, 20, 'Очень очень очень очень круто', '2023-06-15 22:23:22.000000');
+INSERT INTO public.comments (id, article_id, text, created_at) VALUES (10, 21, 'Очень очень очень очень очень круто', '2020-11-21 23:26:24.000000');
+INSERT INTO public.comments (id, article_id, text, created_at) VALUES (11, 22, 'Очень очень очень очень очень очень круто', '2019-02-21 15:28:42.000000');
+INSERT INTO public.comments (id, article_id, text, created_at) VALUES (12, 23, 'Очень очень очень очень очень очень очень круто', '2023-11-15 23:13:54.000000');
+INSERT INTO public.comments (id, article_id, text, created_at) VALUES (13, 24, 'Очень очень очень очень очень очень очень очень круто', '2021-10-19 16:28:05.000000');
+
+INSERT INTO public.tokens (id, user_id, key) VALUES (11, 12, 'd98b36113c4043720a8da83596bd055c');
+INSERT INTO public.tokens (id, user_id, key) VALUES (12, 13, '05d8a754e741333c25395aa385af61d3');
+INSERT INTO public.tokens (id, user_id, key) VALUES (13, 14, 'a28d37e8275b7a4d477b1d02206cb567');
+INSERT INTO public.tokens (id, user_id, key) VALUES (14, 15, '8a6ec898cf4b8d850e96d972a08d6236');
+INSERT INTO public.tokens (id, user_id, key) VALUES (15, 16, '4db364b36dd4189ca5e70a840c087fee');
+INSERT INTO public.tokens (id, user_id, key) VALUES (16, 17, 'af8ea281d5693482ee25947902e7895e');
+INSERT INTO public.tokens (id, user_id, key) VALUES (17, 18, 'ea4d5f8096473854953ae959a5a5cffe');
+INSERT INTO public.tokens (id, user_id, key) VALUES (18, 19, '91215b271e63e868b9ebb9d168cc27fe');
+INSERT INTO public.tokens (id, user_id, key) VALUES (19, 20, '5c252898dc139b4355dadc44ffc153c2');
+INSERT INTO public.tokens (id, user_id, key) VALUES (20, 21, 'aa82d4b49ef5dfd2f9e867473d44b502');

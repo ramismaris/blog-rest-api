@@ -1,0 +1,68 @@
+GET http://127.0.0.1:8000/article/getAll
+Accept: application/json
+
+###
+GET http://127.0.0.1:8000/article/get/28
+Accept: application/json
+
+###
+POST http://localhost:8000/article/create
+Content-Type: application/json
+Authorization: Bearer 1234
+
+{
+  "title": "Moscow",
+  "text": "Moscow is good city"
+}
+
+###
+DELETE http://localhost:8000/article/delete?article_id=14
+Content-Type: application/json
+Authorization: Bearer 1234
+
+
+###
+PATCH http://localhost:8000/article/update?article_id=14
+Content-Type: application/json
+Authorization: Bearer ramis
+
+{
+  "title": "Tokyo"
+}
+
+###
+
+GET http://127.0.0.1:8000/user/get/mahmud_bahmut
+Authorization: Bearer 950286bf44bd40a1407ba3cdf5659c3f
+Accept: application/json
+
+###
+
+POST http://127.0.0.1:8000/user/create
+Authorization: Bearer 950286bf44bd40a1407ba3cdf5659c3f
+Content-Type: application/json
+
+{
+  "username": "mahmud_bahmut",
+  "is_superuser": true
+}
+
+###
+
+POST http://127.0.0.1:8000/user/add_token?user_id=22
+Authorization: Bearer r
+Content-Type: application/json
+
+
+###
+
+POST http://127.0.0.1:8000/comment/create
+Content-Type: application/json
+
+{
+  "article_id": 14,
+  "text": "sflkasjfdskalfjadlkfadsjlfkasfkls"
+}
+
+
+###

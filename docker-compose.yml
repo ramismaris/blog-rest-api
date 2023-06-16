@@ -1,0 +1,50 @@
+version: "3.0"
+
+services:
+  db:
+    container_name: blog-db
+    image: postgres:14.1-alpine
+    env_file:
+      - ".env"
+    restart: always
+    volumes:
+      - ./postgresql:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - custom
+  web:
+    container_name: "blog-web"
+    command: bash -c "python -m web.database.session && uvicorn web.main:app --host 0.0.0.0"
+    build: .
+    ports:
+      - "8000:8000"
+    restart: always
+    volumes:
+      - .:/src
+    env_file:
+      - ".env"
+    depends_on:
+      - db
+    networks:
+      - custom
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin4_container
+    restart: always
+    ports:
+      - "6060:80"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ramis@admin.com
+      PGADMIN_DEFAULT_PASSWORD: adminadmi
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+
+
+networks:
+  custom:
+    driver: bridge
+
+volumes:
+  local_pgdata:
+  pgadmin-data:

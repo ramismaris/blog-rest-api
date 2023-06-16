@@ -1,0 +1,26 @@
+version: "3.0"
+services:
+  db:
+    container_name: blog-db
+    image: postgres:14.1-alpine
+    env_file:
+      - ".env"
+    restart: always
+    volumes:
+      - ./postgresql:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+  test-db:
+    container_name: test-db
+    image: postgres:14.1-alpine
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=postgres
+    restart: always
+    ports:
+      - "5433:5432"
+
+networks:
+  custom:
+    driver: bridge
