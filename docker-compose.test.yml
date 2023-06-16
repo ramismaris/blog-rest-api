@@ -14,9 +14,9 @@ services:
     container_name: test-db
     image: postgres:14.1-alpine
     environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=postgres
+      - POSTGRES_USER=${DB_USER_TEST}
+      - POSTGRES_PASSWORD=${DB_PASS_TEST}
+      - POSTGRES_DB=${DB_NAME_TEST}
     restart: always
     ports:
       - "5433:5432"
